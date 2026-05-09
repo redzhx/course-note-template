@@ -1,6 +1,6 @@
 # Course Note Template
 
-Claude Code 课程笔记处理工作流模板。配合 [image-ocr](https://github.com) 和 [notes-supplement](https://github.com) 两个 skill，将原始课程笔记（含图片和语音文稿）自动整理为出版级 Markdown。
+Claude Code 课程笔记处理工作流模板。配合 [image-ocr](https://github.com/redzhx/claude-skills) 和 [notes-supplement](https://github.com/redzhx/claude-skills) 两个 skill，将原始课程笔记（含图片和语音文稿）自动整理为出版级 Markdown。
 
 ## 工作流
 
@@ -14,15 +14,19 @@ Claude Code 课程笔记处理工作流模板。配合 [image-ocr](https://githu
 ## 使用方法
 
 ```bash
-# 克隆模板
+# 1. 拉取 skills 并安装到用户级（仅首次）
+git clone git@github.com:redzhx/claude-skills.git ~/claude-skills
+ln -s ~/claude-skills/*/ ~/.claude/skills/
+
+# 2. 克隆本模板创建课程目录
 git clone git@github.com:redzhx/course-note-template.git 课程目录
 cd 课程目录
 
-# 1. 编辑 CLAUDE.md，修改标题和目录结构
+# 3. 编辑 CLAUDE.md，修改标题和目录结构
 
-# 2. 将笔记文件复制到目录中
+# 4. 将笔记文件复制到目录中
 
-# 3. 在 Claude Code 中打开此目录开始处理
+# 5. 在 Claude Code 中打开此目录开始处理
 ```
 
 ## 文件结构
@@ -37,7 +41,11 @@ cd 课程目录
 ## 前置条件
 
 - Claude Code (CLI 或桌面版)
-- 已安装 `image-ocr` 和 `notes-supplement` skill（用户级）
+- 已安装 `image-ocr`、`notes-supplement` skill（使用上方安装命令）
+
+## 相关仓库
+
+- [redzhx/claude-skills](https://github.com/redzhx/claude-skills) — 自定义 skill 集合
 
 ## License
 
